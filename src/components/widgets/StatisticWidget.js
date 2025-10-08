@@ -42,7 +42,7 @@ const StatisticWidget = ({
 					<View style={styles.trendContainer}>
 						<Icon
 							name={trend === 'up' ? 'trending-up' : 'trending-down'}
-							size={isTab ? 18 : 16}
+							size={isTab ? theme.iconography.xs : theme.iconography.xxs}
 							color={trendColor}
 							style={styles.trendIcon}
 						/>

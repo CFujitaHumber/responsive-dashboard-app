@@ -83,7 +83,19 @@ export const typography = {
 	body: rf(16),
 	caption: rf(14),
 	small: rf(12),
+	extraSmall: rf(10)
 };
+
+//Responsive Icons
+export const iconography = {
+	xxl: rf(50),
+	lg: rf(28),
+	md: rf(24),
+	sm: rf(20),
+	xs: rf(18),
+	xxs: rf(16),
+}
+
 // Check if device is tablet
 export const isTablet = () => {
 	return getDeviceType() === 'tablet' || getDeviceType() === 'desktop';

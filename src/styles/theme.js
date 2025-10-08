@@ -1,5 +1,5 @@
 import { Platform } from 'react-native';
-import { wp, hp, rf, spacing, typography } from '../utils/responsive';
+import { wp, hp, rf, spacing, typography, iconography } from '../utils/responsive';
 export const colors = {
 	primary: {
 		main: '#3498db',
@@ -96,6 +96,7 @@ export const theme = {
 	colors,
 	spacing,
 	typography,
+	iconography,
 	shadows,
 	borderRadius,
 	// Common component styles
