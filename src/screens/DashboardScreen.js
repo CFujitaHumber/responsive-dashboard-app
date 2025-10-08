@@ -10,7 +10,7 @@ TouchableOpacity,
 Text,
 } from 'react-native';
 import Orientation from 'react-native-orientation-locker';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from "@react-native-vector-icons/material-icons";
 import DashboardHeader from '../components/DashboardHeader';
 import ResponsiveGrid from '../components/ResponsiveGrid';
 import StatisticWidget from '../components/widgets/StatisticWidget';
