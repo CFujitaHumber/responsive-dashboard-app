@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import Icon from "@react-native-vector-icons/material-icons";
 import { theme } from '../styles/theme';
-import { wp, hp, isTablet, getAdaptivePadding } from '../utils/responsive';
+import { wp, hp, rf, isTablet, getAdaptivePadding } from '../utils/responsive';
 const DashboardHeader = ({
 	title = 'Dashboard',
 	subtitle,
@@ -39,7 +39,7 @@ const DashboardHeader = ({
 							accessibilityLabel="Open menu">
 							<Icon
 								name="menu"
-								size={isTab ? 28 : 24}
+								size={isTab ? theme.iconography.lg : theme.iconography.md}
 								color={theme.colors.primary.contrast}
 							/>
 						</TouchableOpacity>
@@ -66,7 +66,7 @@ const DashboardHeader = ({
 							accessibilityLabel="View notifications">
 							<Icon
 								name="notifications"
-								size={isTab ? 28 : 24}
+								size={isTab ? theme.iconography.lg : theme.iconography.md}
 								color={theme.colors.primary.contrast}
 							/>
 							{/* Notification badge */}
@@ -84,7 +84,7 @@ const DashboardHeader = ({
 						<View style={styles.profileAvatar}>
 							<Icon
 								name="person"
-								size={isTab ? 24 : 20}
+								size={isTab ? theme.iconography.sm : theme.iconography.xs}
 								color={theme.colors.primary.main}
 							/>
 						</View>
@@ -147,9 +147,9 @@ const styles = StyleSheet.create({
 		marginLeft: theme.spacing.sm,
 	},
 	profileAvatar: {
-		width: isTablet() ? 44 : 40,
-		height: isTablet() ? 44 : 40,
-		borderRadius: isTablet() ? 22 : 20,
+		width: isTablet() ? rf(25) : rf(22),
+		height: isTablet() ? rf(25) : rf(22),
+		borderRadius: isTablet() ? rf(22) : rf(20),
 		backgroundColor: theme.colors.primary.contrast,
 		alignItems: 'center',
 		justifyContent: 'center',
@@ -160,16 +160,16 @@ const styles = StyleSheet.create({
 		top: 4,
 		right: 4,
 		backgroundColor: theme.colors.accent.main,
-		borderRadius: 10,
-		minWidth: 18,
-		height: 18,
+		borderRadius: rf(10),
+		minWidth: theme.iconography.xxs,
+		height: theme.iconography.xxs,
 		alignItems: 'center',
 		justifyContent: 'center',
 		borderWidth: 2,
 		borderColor: theme.colors.primary.main,
 	},
 	badgeText: {
-		fontSize: 10,
+		fontSize: theme.typography.extraSmall,
 		color: theme.colors.accent.contrast,
 		fontWeight: 'bold',
 	},
